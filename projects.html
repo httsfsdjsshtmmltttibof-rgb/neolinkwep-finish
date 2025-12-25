@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neolink</title>
+
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background: radial-gradient(circle at top, #0f2a44, #081826);
+      font-family: Arial, sans-serif;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:1000px;
+      padding:40px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    /* PROFILE */
+    .profile{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .profile img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #4facfe;
+      box-shadow:0 0 25px rgba(79,172,254,0.7);
+      margin-bottom:15px;
+    }
+
+    .profile h1{
+      margin:0;
+      font-size:36px;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:30px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.08);
+      border-radius:20px;
+      padding:30px;
+      box-shadow: 0 0 40px rgba(0,150,255,0.15);
+      transition: 0.35s ease;
+    }
+
+    .card:hover{
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 0 70px rgba(0,180,255,0.45);
+    }
+
+    .card h2{
+      margin-top:0;
+      font-size:22px;
+    }
+
+    .card p{
+      opacity:0.8;
+      line-height:1.5;
+    }
+
+    .card button{
+      margin-top:20px;
+      padding:12px 22px;
+      border:none;
+      border-radius:12px;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color:white;
+      font-size:15px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .card button:hover{
+      transform: scale(1.08);
+      box-shadow:0 0 25px rgba(0,200,255,0.8);
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform: translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- PROFILE -->
+    <div class="profile">
+      
+      <h1>Neolink</h1>
+    
+    </div>
+
+    <div class="projects">
+
+      <div class="card">
+        <h2>🔗 Bio Link</h2>
+        <p>Instagram va Telegram uchun zamonaviy bio link sahifa.</p>
+        <button onclick="window.open('https://ibrohimabdurashidov010-bit.github.io/neolin/', '_blank')">
+          Open
+        </button>
+      </div>
+
+      <div class="card">
+        <h2>🤖 Telegram Bot</h2>
+        <p>Avtomatik buyurtmalar va mijozlar bilan ishlash boti.</p>
+        <button onclick="window.open('https://t.me/Neolinkuz_bot', '_blank')">
+          Open
+        </button>
+      </div>
+
+      <div class="card">
+        <h2>🌐 Web Site</h2>
+        <p>Minimalistik va tezkor biznes sayt.</p>
+        <button alert="Tez kunda">Open</button>
+      </div>
+
+      <!-- ADMIN -->
+      <div class="card">
+        <h2>🔐 Admin Projects</h2>
+        <p>Faqat ruxsat bilan kiriladi.</p>
+        <button onclick="openAdmin()">Open</button>
+      </div>
+
+    </div>
+  </div>
+<script>
+function openAdmin(){
+  const code = prompt("Admin kodni kiriting:");
+  const secret = "rlankaa";
+
+  if(code && code.toLowerCase() === secret){
+    window.open(
+      "https://httsfsdjsshtmmltttibof-rgb.github.io/neolinks-admin/",
+      "_blank"
+    );
+  } else {
+    alert("❌ Noto‘g‘ri kod!");
+  }
+}
+</script>
+ 
+
+</body>
+</html>
